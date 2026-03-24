@@ -1,9 +1,9 @@
 import "../components/styles/header.css"
 import { UserRound } from 'lucide-react';
-import { Folder } from "lucide-react";
 
-export default function Header(){
-    const sizeIcon =20;
+
+export default function Header({title}){
+   const sizeIcon = 20;
 
     return(
         <>
@@ -13,7 +13,7 @@ export default function Header(){
             
             {/* sa se an tit la */}
             <div className="title">
-                <h1>Employe Dashboard</h1>
+                <h1>{title}</h1>
             </div>
 
             {/* sa pati connexion an */}
