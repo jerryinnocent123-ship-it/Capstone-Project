@@ -5,7 +5,7 @@ import SideBar from "../layouts/SideBar"
 export default function EmployesList(){
     return(
         <>
-       <Header />
+       <Header title={"Employes List"} />
        <SideBar />
         </>
     )

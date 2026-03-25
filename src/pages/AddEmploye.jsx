@@ -6,7 +6,7 @@ import SideBar from "../layouts/SideBar"
 export default function AddEmploye() {
     return (
         <>
-            <Header />
+            <Header title={"Add an Employe"}/>
             <SideBar />
         </>
     )
