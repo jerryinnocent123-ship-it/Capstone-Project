@@ -1,5 +1,5 @@
 import "../components/styles/header.css"
-import { UserRound } from 'lucide-react';
+import {UserRound} from 'lucide-react';
 
 
 export default function Header({title}){
