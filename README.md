@@ -1,16 +1,42 @@
-# React + Vite
+initialzation Project Capstone 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Objectif du Projet:
+Realiser un Application web qui peut gerer:
+- Les employes
+- Ajouts, retraits de personnes (Employes)
+- la liste complete des employes
+- un formulaire pour ajouter des employes
 
-Currently, two official plugins are available:
+initilasation de react
+Creation des components:
+- Header
+- SideBar
+- EmployeeList
+- EmployeeCard
+- EmployyeForm
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+  Header:
+  -contient le titre de chaque section ( page)
+  -un icon User a remplacer a l'avenir par un vrai compte
 
-## React Compiler
+  SiderBar:
+  -Un navigation Lateral ( a gauche)
+  -un titre ( a rempacer a l'avenir)
+  -Des liens (Link) qui vous dirige vers chaque section
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+  EmployeeList:
+  -Liste des employes qui sont afiche par EmployeeCard
 
-## Expanding the ESLint configuration
+  EmployeeCard:
+  -Les employes et leurs informations
+  -Chaque information se genere grace aux props et au tableu data/empl
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+  EmployeeForm:
+  -Formulaire d'ajout,retrait,modification d'employes dans la liste
+
+
+Project Capstone by J&J Group, all are reserved, ask to edit something.
+
+
+
+  
