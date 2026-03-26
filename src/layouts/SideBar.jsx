@@ -1,7 +1,8 @@
-import { Folder } from 'lucide-react';
+
 import './sideBar.css';
 import { Link } from "react-router-dom"
 
+import { Folder } from 'lucide-react';
 import { LayoutDashboard } from 'lucide-react';
 import { User } from 'lucide-react';
 import { PlusIcon } from 'lucide-react';
@@ -13,8 +14,8 @@ export default function SideBar() {
         <div className="sidebar">
 
             <div className="system-title">
-                <Folder size={sizeIcon} />
-                <h3>HR_SYSTEM</h3>
+                
+                <h3> <Folder size={sizeIcon} />  HR_SYSTEM</h3>
             </div>
 
             <div className="nav-menu">
