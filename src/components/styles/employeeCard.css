@@ -1,0 +1,122 @@
+/* Style pour EmployeeCard - Même style que le formulaire */
+.profil-containers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.profil {
+    background: white;
+    border: 1px solid #e0e0e0;
+    padding: 20px 24px;
+    transition: all 0.2s ease;
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.profil:hover {
+    border-color: black;
+    box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.1);
+    transform: translateX(5px);
+}
+
+.name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 12px;
+}
+
+.name h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+    margin: 0;
+}
+
+/* Style pour le statut Actif */
+.name span.actif {
+    font-size: 11px;
+    padding: 4px 12px;
+    background: black;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: none;
+}
+
+/* Style pour le statut Inactif */
+.name span.inactif {
+    font-size: 11px;
+    padding: 4px 12px;
+    background: #f0f0f0;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 1px solid #ddd;
+}
+
+/* Style pour la position */
+.profil p:first-of-type {
+    font-size: 13px;
+    color: #666;
+    margin: 10px 0 8px 0;
+    font-weight: 500;
+}
+
+/* Style pour le département */
+.profil p:last-of-type {
+    font-size: 12px;
+    color: #999;
+    margin: 0;
+    padding-bottom: 5px;
+}
+
+/* Animation au chargement */
+@keyframes fadeInCard {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.profil-containers {
+    animation: fadeInCard 0.3s ease-out;
+}
+
+/* Responsive pour petits écrans */
+@media (max-width: 768px) {
+    .profil {
+        max-width: 100%;
+        padding: 16px 20px;
+        margin: 0 10px;
+    }
+    
+    .name h2 {
+        font-size: 16px;
+    }
+    
+    .name span.actif,
+    .name span.inactif {
+        font-size: 10px;
+        padding: 3px 8px;
+    }
+    
+    .profil p:first-of-type {
+        font-size: 12px;
+    }
+    
+    .profil p:last-of-type {
+        font-size: 11px;
+    }
+}
