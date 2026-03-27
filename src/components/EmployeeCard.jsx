@@ -15,7 +15,8 @@ export default function EmployeeCard({ name, position, department, actif }) {
                     <div className="name">
                         <h2> {name} </h2>
                         <span className={actif}>
-                            {actif === true ? "Actif" : "Inactif"}</span>
+                            {actif === true ? "Actif" : "Inactif"}
+                        </span>
                     </div>
 
                     <p className={position}> {position} </p>
