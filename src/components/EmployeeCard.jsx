@@ -1,5 +1,6 @@
 // Chaque profil affiche : nom, poste,
 //  département et statut (actif / inactif)
+import "./styles/employeeCard.css";
 
 
 export default function EmployeeCard({ name, position, department, actif }) {
