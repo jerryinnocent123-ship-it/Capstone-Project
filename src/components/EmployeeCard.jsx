@@ -2,26 +2,26 @@
 //  département et statut (actif / inactif)
 
 
-export default function EmployeeCard({name, position, department, actif}){
+export default function EmployeeCard({ name, position, department, actif }) {
 
 
-    return(
+    return (
         <>
-        {/* Lap Affiche information sou yn moun */}
+            {/* Lap Affiche information sou yn moun */}
 
-        <div className="profil-containers">
-            <div className="profil">
+            <div className="profil-containers">
+                <div className="profil">
 
-                <div className="name">
-                    <h2> {name} </h2>
-                    <span
-                     className={actif}>{actif}</span>
+                    <div className="name">
+                        <h2> {name} </h2>
+                        <span className={actif}>
+                            {actif === true ? "Actif" : "Inactif"}</span>
+                    </div>
+
+                    <p className={position}> {position} </p>
+                    <p className={department}> {department} </p>
                 </div>
-
-                <p className={position}> {position} </p>
-                <p className={department}> {department} </p>
             </div>
-        </div>
         </>
     )
 }
