@@ -5,8 +5,8 @@ import EmployeeList from "../components/EmployeeList"
 import EmployeeForm from "../components/EmployeeForm"
 
 
-export default function(){
-    return(
+export default function () {
+    return (
         <>
         <Header title={"Employes Dashboard"}/>
         <SideBar/>

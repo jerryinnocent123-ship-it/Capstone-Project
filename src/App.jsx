@@ -1,26 +1,26 @@
-import {BrowserRouter, Routes, Route} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+
 
 
 import Dashboard from "./pages/Dashboard"
-import EmployesList from "./pages/EmployesList"
 import AddEmploye from "./pages/AddEmploye"
-
+import EmployesList from "./pages/EmployesList"
 
 function App() {
   
 
   return (
-  
-     <BrowserRouter>
-     <Routes>
+    <>
+      <BrowserRouter>
+      <Routes>
+      <Route path="/" element={<Dashboard/>} />
+      <Route path="/add" element={<AddEmploye/>} />
+      <Route path="/list" element={<EmployesList/>} />
 
-      <Route path={"/"} element={<Dashboard/>} />
-      <Route path={"/add"} element={<AddEmploye/>} />
-      <Route path={"/list"} element={<EmployesList/>} />
-     </Routes>
-     
-     </BrowserRouter>
- 
+      </Routes>
+      
+      </BrowserRouter>
+    </>
   )
 }
 
