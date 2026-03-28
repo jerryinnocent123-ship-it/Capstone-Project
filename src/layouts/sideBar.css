@@ -11,7 +11,7 @@
   left: 0;
   width: 280px;
   height: 100vh;
-  background-color: #0a2b3e;  /* bleu sombre */
+  background-color: #0a2b3e;  
   color: white;
   display: flex;
   flex-direction: column;
@@ -22,8 +22,8 @@
 
 .system-title {
   padding: 25px 24px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   margin-bottom: 16px;
+  margin-top: 16px;
  
 }
 

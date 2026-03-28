@@ -10,7 +10,7 @@ export default function () {
         <>
         <Header title={"Employes Dashboard"}/>
         <SideBar/>
-        <div>
+        <div className="containers-">
         <EmployeeList profil= {empl}/>
 
         <EmployeeForm/>
