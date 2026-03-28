@@ -1,0 +1,9 @@
+.header-containers{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30rem;
+    padding: 39px 24px;
+    background-color: white;
+}
+

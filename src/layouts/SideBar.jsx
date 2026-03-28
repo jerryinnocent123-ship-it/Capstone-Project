@@ -1,0 +1,47 @@
+
+import './sideBar.css';
+import { Link } from "react-router-dom"
+
+import { Folder } from 'lucide-react';
+import { LayoutDashboard } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { PlusIcon } from 'lucide-react';
+
+export default function SideBar() {
+    const sizeIcon = 30;
+
+    return (
+        <div className="sidebar">
+
+            <div className="system-title">
+                
+                <h3> <Folder size={sizeIcon} />  HR_SYSTEM</h3>
+            </div>
+
+            <div className="nav-menu">
+
+                {/* Lien vers dashboard la */}
+                <Link to={"/"} className="nav-btn">
+                   <LayoutDashboard size={sizeIcon} />
+                    Dashboard
+                </Link>
+
+                {/* Lien vers employe list la */}
+                <Link to={"/list"} className="nav-btn">
+                    <Users />
+                    Employes
+                </Link>
+
+                {/* Lien vers AddEmployes la */}
+                <Link to={"/add"} className="nav-btn">
+                    <PlusIcon />
+                    addEmployes
+                </Link>
+
+
+
+            </div>
+        </div>
+    );
+};
+
