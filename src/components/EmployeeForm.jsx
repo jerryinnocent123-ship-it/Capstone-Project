@@ -67,7 +67,8 @@ export default function EmployeeForm() {
       <div className="form-container">
         <div className="form-card">
           <h3 className="form-title">Ajouter</h3>
-          <input
+          <div className="form-fields">
+            <input
             type="text"
             name="name"
             placeholder="Nom"
@@ -91,6 +92,7 @@ export default function EmployeeForm() {
             value={formData.department}
             className="input-field"
           />
+          </div>
           <button type="button" onClick={addEmployee} className="submit-btn">
             +Ajouter
           </button>
