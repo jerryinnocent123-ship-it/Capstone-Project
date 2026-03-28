@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 
 import { Folder } from 'lucide-react';
 import { LayoutDashboard } from 'lucide-react';
-import { User } from 'lucide-react';
+import { Users } from 'lucide-react';
 import { PlusIcon } from 'lucide-react';
 
 export default function SideBar() {
@@ -28,7 +28,7 @@ export default function SideBar() {
 
                 {/* Lien vers employe list la */}
                 <Link to={"/list"} className="nav-btn">
-                    <User />
+                    <Users />
                     Employes
                 </Link>
 
