@@ -92,7 +92,7 @@ export default function EmployeeForm() {
             className="input-field"
           />
           <button type="button" onClick={addEmployee} className="submit-btn">
-            +
+            +Ajouter
           </button>
         </div>
       </div>

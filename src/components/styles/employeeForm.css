@@ -14,25 +14,37 @@
 
 /* Formulaire en haut à droite - petit carré noir et blanc */
 .form-container {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
+     position: fixed;
+  top: 0;
+  right: 0;
+  width: 280px;
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  overflow-y: auto;
+    
 }
+
+
 
 .form-card {
     width: 280px;
     background: white;
+    height: 100vh;
     border: 2px solid black;
     padding: 20px;
     box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease;
 }
 
+/* 
 .form-card:hover {
     transform: translate(-2px, -2px);
     box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.2);
-}
+} */
 
 .form-title {
     font-size: 18px;
