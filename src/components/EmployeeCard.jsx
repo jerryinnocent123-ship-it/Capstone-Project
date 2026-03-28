@@ -14,14 +14,14 @@ export default function EmployeeCard({ name, position, department, actif }) {
                 <div className="profil">
 
                     <div className="name">
-                        <h2> {name} </h2>
+                        <h2>Name : {name} </h2>
                         <span className={actif}>
                             {actif === true ? "Actif" : "Inactif"}
                         </span>
                     </div>
 
-                    <p className={position}> {position} </p>
-                    <p className={department}> {department} </p>
+                    <p className={position}>Post: {position} </p>
+                    <p className={department}>Departement:  {department} </p>
                 </div>
             </div>
         </>
