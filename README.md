@@ -1,4 +1,6 @@
-initialzation Project Capstone 
+initialzation Project Capstone :
+-npm install
+after clone : git clone url....
 
 Objectif du Projet:
 Realiser un Application web qui peut gerer:
@@ -33,6 +35,11 @@ Creation des components:
 
   EmployeeForm:
   -Formulaire d'ajout,retrait,modification d'employes dans la liste
+
+  Style: nous pa utilize responsible style, a mettre a l'avenir
+
+  aspect de l'app:
+  après lájout des employes, il disparait lor de recharge d un page.
 
 
 Project Capstone by J&J Group, all are reserved, ask to edit something.
