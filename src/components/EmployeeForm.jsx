@@ -12,6 +12,8 @@
 
 import { useState } from "react";
 import "./styles/employeeForm.css";
+import {PlusIcon} from "lucide-react";
+
 
 export default function EmployeeForm() {
   const [formData, setFormData] = useState({
@@ -21,6 +23,7 @@ export default function EmployeeForm() {
   });
 
   const [profil, setProfil] = useState([]);
+  const [isModalOpen, setIsModalOpen] = useState(false); // State pou modal la
 
   function handleChange(event) {
     setFormData((previous) => ({
@@ -52,6 +55,9 @@ export default function EmployeeForm() {
     // Réinitialiser le formulaire
     setFormData({ name: "", position: "", department: "" });
     
+    // Fèmen modal la apre ajoute
+    setIsModalOpen(false);
+    
     console.log("Employé ajouté:", newEmployee);
   }
 
@@ -61,14 +67,69 @@ export default function EmployeeForm() {
     console.log("Employé supprimé, ID:", id);
   }
 
+  // Fonksyon pou louvri modal la
+  function openModal() {
+    setIsModalOpen(true);
+  }
+
+  // Fonksyon pou fèmen modal la
+  function closeModal() {
+    setIsModalOpen(false);
+    // Opsyonèl: reyini form nan lè w fèmen
+    setFormData({ name: "", position: "", department: "" });
+  }
+
   return (
     <div className="app-container">
-      {/* Formulaire en haut à droite - petit carré noir et blanc */}
+      {/* Formulaire sou PC - rete a dwat */}
       <div className="form-container">
         <div className="form-card">
           <h3 className="form-title">Ajouter</h3>
           <div className="form-fields">
             <input
+              type="text"
+              name="name"
+              placeholder="Nom"
+              onChange={handleChange}
+              value={formData.name}
+              className="input-field"
+            />
+            <input
+              type="text"
+              name="position"
+              placeholder="Poste"
+              onChange={handleChange}
+              value={formData.position}
+              className="input-field"
+            />
+            <input
+              type="text"
+              name="department"
+              placeholder="Département"
+              onChange={handleChange}
+              value={formData.department}
+              className="input-field"
+            />
+          </div>
+          <button type="button" onClick={addEmployee} className="submit-btn">
+            + Ajouter
+          </button>
+        </div>
+      </div>
+
+      {/* Bouton floating pou mobil */}
+      <button className="floating-add-btn" onClick={openModal}>
+        <PlusIcon size={28} />
+      </button>
+
+      {/* Modal pou form nan sou mobil */}
+      <div className={`form-modal ${isModalOpen ? 'open' : ''}`}>
+        <div className="modal-header">
+          <h3>Ajouter un employé</h3>
+          <button className="close-modal" onClick={closeModal}>✕</button>
+        </div>
+        <div className="form-fields">
+          <input
             type="text"
             name="name"
             placeholder="Nom"
@@ -92,16 +153,14 @@ export default function EmployeeForm() {
             value={formData.department}
             className="input-field"
           />
-          </div>
-          <button type="button" onClick={addEmployee} className="submit-btn">
-            +Ajouter
-          </button>
         </div>
+        <button type="button" onClick={addEmployee} className="submit-btn">
+          + Ajouter
+        </button>
       </div>
 
       {/* Liste des employés */}
       <div className="list-container">
-        {/* <h2 className="list-title">Employés</h2> */}
         {profil.length === 0 ? (
           <p className="empty-message">Aucun employé</p>
         ) : (

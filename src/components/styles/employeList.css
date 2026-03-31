@@ -1,4 +1,119 @@
-.list-containers{
-    color: black;
-    text-align: center;
+/* EmployeeList Styles */
+.list-containers {
+  flex: 1;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #f8f9fa;
+  margin-left: 280px; /* Lajè sidebar la sou PC */
+  transition: all 0.3s ease;
+  margin-top: 50px;
+}
+
+.list-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+/* Responsive pou PC - yon sel liy horizontal si gen plas */
+@media (min-width: 1200px) {
+  .list-containers {
+    padding: 30px;
+    margin-left: 280px;
+  }
+
+  .list-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  /* Chak card pran yon lajè fiks pou yo rete nan yon sel liy */
+  .list-items > * {
+    flex: 0 0 calc(33.333% - 16px);
+    min-width: 280px;
+  }
+}
+
+/* Pou ekran mwayen (tablèt ak ti PC) */
+@media (min-width: 769px) and (max-width: 1199px) {
+  .list-containers {
+    padding: 24px;
+    margin-left: 260px; /* Lajè sidebar sou tablèt */
+  }
+
+  .list-items {
+    gap: 20px;
+  }
+
+  /* 2 cards pa liy sou ekran mwayen */
+  .list-items > * {
+    flex: 0 0 calc(50% - 10px);
+    min-width: 280px;
+  }
+}
+
+/* Responsive pou mobil (max-width: 768px) */
+@media (max-width: 768px) {
+  .list-containers {
+    padding: 16px;
+    margin-left: 0; /* Sou mobil, sidebar anba, pa gen margin */
+    margin-bottom: 70px; /* Espas pou sidebar anba */
+  }
+
+  .list-items {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  /* Chak card pran tout lajè a sou mobil */
+  .list-items > * {
+    width: 100%;
+  }
+}
+
+/* Pou ekran piti (max-width: 480px) */
+@media (max-width: 480px) {
+  .list-containers {
+    padding: 12px;
+    margin-bottom: 70px;
+  }
+
+  .list-items {
+    gap: 12px;
+  }
+}
+
+/* Loading state oswa mesaj vid */
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #6c757d;
+  font-size: 1.1rem;
+}
+
+.empty-state svg {
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+/* Scrollbar personnalisée */
+.list-containers::-webkit-scrollbar {
+  width: 8px;
+}
+
+.list-containers::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.list-containers::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 10px;
+}
+
+.list-containers::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
 }
